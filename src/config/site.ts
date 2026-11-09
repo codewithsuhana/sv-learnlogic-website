@@ -279,7 +279,7 @@ export const flagshipPrograms: Program[] = [
       "A comprehensive algorithmic mastery program covering 17 core topic areas from Big-O complexity to Dynamic Programming and Graph algorithms.",
     longDescription:
       "The Java Data Structures & Algorithms curriculum at SV LearnLogic is engineered to transform students into analytical problem-solvers capable of dissecting complex computational challenges. Moving beyond rote memorization, this program instills deep pattern recognition across arrays, trees, dynamic programming, and graph structures.",
-    heroImage: "https://images.unsplash.com/photo-1516116211227-bbc364f895c2?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=80",
     topics: [
       "Java Fundamentals for Problem Solving",
       "Time and Space Complexity (Asymptotic Analysis)",

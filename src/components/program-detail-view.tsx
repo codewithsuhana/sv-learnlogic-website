@@ -31,6 +31,7 @@ interface ProgramDetailViewProps {
 export function ProgramDetailView({ program }: ProgramDetailViewProps) {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [expandedModule, setExpandedModule] = useState<number | null>(1);
+  const [imgSrc, setImgSrc] = useState(program.heroImage);
 
   // Other related programs
   const relatedPrograms = flagshipPrograms.filter((p) => p.id !== program.id);
@@ -118,10 +119,16 @@ export function ProgramDetailView({ program }: ProgramDetailViewProps) {
             <div className="lg:col-span-5">
               <div className="relative rounded-2xl overflow-hidden border border-navy-700/80 shadow-2xl group h-80 sm:h-96 w-full">
                 <Image
-                  src={program.heroImage}
+                  src={imgSrc}
                   alt={program.title}
                   fill
+                  onError={() =>
+                    setImgSrc(
+                      "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=80"
+                    )
+                  }
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-500 opacity-80"
+                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent" />
 
